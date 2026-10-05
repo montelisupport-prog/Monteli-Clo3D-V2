@@ -1,0 +1,2 @@
+
+export class RevisionStore{constructor(){this.items=[]}commit(label,state){const r={id:crypto.randomUUID?.()||String(Date.now()),label,time:new Date().toISOString(),state:structuredClone(state)};this.items.push(r);return r}restore(id){return structuredClone(this.items.find(x=>x.id===id)?.state)}diff(a,b){const A=this.items.find(x=>x.id===a)?.state||{},B=this.items.find(x=>x.id===b)?.state||{};return {a:A,b:B}}}

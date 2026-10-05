@@ -1,0 +1,3 @@
+
+export function standardDXF(pieces){let o='0\nSECTION\n2\nENTITIES\n';for(const p of pieces){const pts=p.points||[];for(let i=0;i<pts.length;i++){const a=pts[i],b=pts[(i+1)%pts.length];o+=`0\nLINE\n8\n${p.name||'PATTERN'}\n10\n${a.x}\n20\n${a.y}\n11\n${b.x}\n21\n${b.y}\n`}}return o+'0\nENDSEC\n0\nEOF\n'}
+export function interchangeManifest(format,pieces){return {format,units:'cm',patterns:pieces.map(p=>({name:p.name,grainline:p.grainline,notches:p.notches||[],seamAllowanceCm:p.seamAllowanceCm||0,grading:p.grading||null})),warning:format==='STANDARD_DXF'?null:'AAMA/ASTM manifest requires receiver validation before production'}}

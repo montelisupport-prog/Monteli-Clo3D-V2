@@ -1,0 +1,1 @@
+export function validateProduction(project){const issues=[];if(!project?.measurements)issues.push('Missing measurements');if(!project?.fabric?.gsm)issues.push('Missing GSM');return {ok:issues.length===0,issues};}

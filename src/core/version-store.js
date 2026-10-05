@@ -1,0 +1,1 @@
+export class VersionStore{constructor(key='monteli.project.versions'){this.key=key;} load(){return JSON.parse(localStorage.getItem(this.key)||'[]')} save(v){const a=this.load();a.push(v);localStorage.setItem(this.key,JSON.stringify(a));return a;}}
