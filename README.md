@@ -77,3 +77,10 @@ The center canvas no longer stays blank during pattern work. A persistent 2D PAT
 
 ## V12 Functional Core
 V12 replaces the accumulated prototype UI with a smaller functional workspace: left = garment/fabric input, center = live 2D/3D work surface, right = selection/construction/simulation inspector. Hollow legacy controls are hidden in V12 Core mode. Sewing has a visible transition; 3D uses a real Three.js avatar/garment scene with orbit controls and working view/simulate/pause/reset controls.
+
+## V13 Connected T-shirt Workspace
+V13 focuses the default workflow on regular T-shirt flat-lay measurements. The left panel collects 10 garment measurements plus seam allowance (11 fields); armhole depth is calculated automatically. The 2D workspace drafts front, back, sleeve (cut two), and neck rib patterns. Drag cuts and anchors, use V/C/P/− for select/curve/point/delete, and hold Space while dragging to pan. Cmd/Ctrl+Z undo and Cmd/Ctrl+Shift+Z redo.
+
+Assemble Preview passes the edited body and sleeve outlines into the 3D cloth mesh and sews the front/back, two sleeves, and neck rib on the male avatar. Activity explains missing measurements and assembly readiness. Hover circled information icons for section guidance.
+
+The browser cloth solver and pattern-to-mesh connection are functional foundations; fabric calibration and physical sample validation are still needed before production claims.
