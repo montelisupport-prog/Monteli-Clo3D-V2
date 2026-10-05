@@ -1,8 +1,8 @@
 {
-  "name": "monteli-atelier-studio-v12-functional-core",
-  "version": "0.12.0",
+  "name": "monteli-atelier-studio-v14-dual-view-pattern-workspace",
+  "version": "0.14.0",
   "private": true,
-  "description": "MONTELI Atelier next-generation garment CAD and cloth simulation foundation",
+  "description": "MONTELI Atelier side-by-side 2D pattern and 3D garment workspace",
   "scripts": {
     "serve": "python3 -m http.server 8080",
     "check": "node --check src/cad/grading.js && node --check src/cad/darts-pleats.js && node --check src/assembly/sewing-engine.js && node --check src/materials/knit-model.js && node --check src/avatar/avatar-model.js && node --check src/analysis/fit-maps.js && node --check src/production/marker.js && node --check src/production/bom.js && node --check src/project/revisions.js && node --check src/production/dxf.js && node --check src/ai/garment-engineer.js && node --check src/cad/kernel/bezier.js && node --check src/cad/kernel/pattern-ops.js && node --check src/engine/webgpu/cloth-gpu.js && node --check src/fit/inverse-alteration.js && node --check src/render/fabric-profile.js && node --check src/validation/fabric-benchmark.js"

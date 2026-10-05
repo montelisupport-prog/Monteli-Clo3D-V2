@@ -84,3 +84,8 @@ V13 focuses the default workflow on regular T-shirt flat-lay measurements. The l
 Assemble Preview passes the edited body and sleeve outlines into the 3D cloth mesh and sews the front/back, two sleeves, and neck rib on the male avatar. Activity explains missing measurements and assembly readiness. Hover circled information icons for section guidance.
 
 The browser cloth solver and pattern-to-mesh connection are functional foundations; fabric calibration and physical sample validation are still needed before production claims.
+
+## V14 CLO3D-Inspired Dual View
+V14 keeps the 2D pattern cuts and 3D avatar/garment preview visible side by side in the main workspace. The male fit avatar loads before garment assembly, can be rotated with a drag and zoomed with the scroll wheel, and offers slim, standard, and athletic body presets plus front/back/3⁄4 camera views. The 2D cut remains visible while editing and after assembling or simulating drape.
+
+On narrower screens the split view remains available with a taller workspace. The chosen avatar preset updates body measurements; Assemble Preview then fits the current pattern to that avatar.
