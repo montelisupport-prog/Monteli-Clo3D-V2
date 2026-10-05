@@ -263,6 +263,62 @@ body.v6-simple .app{top:calc(var(--v6bar) + 18px)}
 .v9-center.open{display:grid;grid-template-columns:190px 1fr}.v9-nav{background:#19191b;border-right:1px solid #35353a;padding:10px}.v9-nav b{font-size:10px}.v9-nav button{width:100%;border:0;background:transparent;color:#aaa;text-align:left;padding:8px;border-radius:5px;font-size:9px}.v9-nav button.active,.v9-nav button:hover{background:#333337;color:#fff}.v9-main{padding:14px;overflow:auto}.v9-grid{display:grid;grid-template-columns:repeat(3,minmax(180px,1fr));gap:8px}.v9-card{border:1px solid #39393f;background:#19191b;border-radius:8px;padding:10px}.v9-card b{font-size:10px}.v9-card p{font-size:9px;color:#8f8f98;line-height:1.45}.v9-tag{font-size:8px;border:1px solid #45454b;border-radius:99px;padding:2px 5px;color:#aaa}.v9-tag.live{color:#9fc6a7;border-color:#465c4b}.v9-tag.gated{color:#d5b67b;border-color:#66583b}
 @media(max-width:800px){.v9-center.open{grid-template-columns:1fr}.v9-nav{display:none}.v9-grid{grid-template-columns:1fr}}
 
+
+/* ===== V10 VISUAL-FIRST CAD ===== */
+.v10-stage{position:fixed;z-index:68;left:var(--v6rail);right:var(--v6panel);top:calc(var(--v6bar) + 18px);bottom:var(--v6guide);background:#151517;display:none;overflow:hidden}
+body.v10-pattern .v10-stage{display:block}
+body.v10-pattern .app{visibility:hidden}
+.v10-toolbar{position:absolute;left:12px;top:12px;z-index:4;display:flex;gap:5px;background:#232326;border:1px solid #3c3c42;border-radius:7px;padding:5px}
+.v10-toolbar button{background:#19191b;color:#bbb;border:1px solid #39393f;border-radius:4px;padding:6px 8px;font-size:9px}.v10-toolbar button.active{background:#e8e8e8;color:#111}
+.v10-info{position:absolute;left:12px;bottom:12px;z-index:4;background:#222225;border:1px solid #39393e;border-radius:6px;padding:7px 9px;font-size:9px;color:#aaa;max-width:390px}
+#v10Svg{width:100%;height:100%;touch-action:none;user-select:none}
+.v10-gridline{stroke:#252529;stroke-width:.5}.v10-axis{stroke:#36363c;stroke-width:.8}
+.v10-piece{fill:#dedbd4;fill-opacity:.10;stroke:#dedbd4;stroke-width:1.2;vector-effect:non-scaling-stroke}.v10-piece.selected{fill-opacity:.16;stroke-width:1.8}
+.v10-seam{fill:none;stroke:#777780;stroke-width:.65;stroke-dasharray:4 3;vector-effect:non-scaling-stroke}
+.v10-handle-line{stroke:#8b8b94;stroke-width:.7;vector-effect:non-scaling-stroke}.v10-anchor{fill:#f3f3f3;stroke:#111;stroke-width:.7;cursor:move;vector-effect:non-scaling-stroke}.v10-control{fill:#9f9fa8;stroke:#111;stroke-width:.5;cursor:crosshair;vector-effect:non-scaling-stroke}
+.v10-label{fill:#c5c5cb;font-size:4px;pointer-events:none}.v10-dim{stroke:#85858d;stroke-width:.5;vector-effect:non-scaling-stroke}.v10-dimtext{fill:#a9a9b1;font-size:3.2px}
+.v10-inspector{position:fixed;z-index:86;right:0;top:var(--v6bar);bottom:var(--v6guide);width:var(--v6panel);background:#222225;border-left:1px solid #36363b;padding:11px;overflow:auto;display:none}
+body.v10-pattern .v10-inspector{display:block}
+.v10-inspector h3{font-size:11px;margin:3px 0 10px}.v10-inspector h4{font-size:9px;color:#aaa;margin:12px 0 6px}.v10-field{display:grid;grid-template-columns:1fr 72px;gap:6px;align-items:center;margin:5px 0;font-size:9px;color:#aaa}.v10-field input{width:100%;background:#171719;color:#eee;border:1px solid #3a3a40;border-radius:4px;padding:6px;text-align:right}
+.v10-note{font-size:8px;line-height:1.5;color:#85858e;background:#19191b;border:1px solid #333338;border-radius:5px;padding:7px}.v10-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:8px}.v10-actions button{padding:7px;background:#303034;color:#ddd;border:1px solid #44444a;border-radius:5px;font-size:9px}.v10-actions button.primary{background:#e8e8e8;color:#111}
+.v10-toast{position:fixed;z-index:120;left:50%;bottom:90px;transform:translateX(-50%);background:#eee;color:#111;border-radius:6px;padding:8px 12px;font-size:9px;opacity:0;pointer-events:none;transition:.2s}.v10-toast.show{opacity:1}
+
+
+/* ===== V11 LIVE WORKSPACE: never leave the center blank ===== */
+.v11-switch{position:fixed;z-index:91;left:calc(var(--v6rail) + 285px);top:calc(var(--v6bar) + 27px);display:flex;background:#202023;border:1px solid #3a3a40;border-radius:6px;padding:3px;gap:3px}
+.v11-switch button{border:0;background:transparent;color:#999;padding:6px 10px;border-radius:4px;font-size:9px}.v11-switch button.active{background:#e8e8e8;color:#111}
+.v11-pattern-stage{position:fixed;z-index:67;left:calc(var(--v6rail) + 285px);right:var(--v6panel);top:calc(var(--v6bar) + 62px);bottom:var(--v6guide);background:#171719;display:none;overflow:hidden}
+body.v11-show-pattern .v11-pattern-stage{display:block}
+body.v11-show-pattern .preview-wrap,body.v11-show-pattern #preview3d,body.v11-show-pattern .viewer{visibility:hidden}
+#v11Svg{width:100%;height:100%;display:block}
+.v11-piece{fill:#d8d4ca;fill-opacity:.12;stroke:#e4e1d9;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.v11-cut{fill:none;stroke:#aaa7a0;stroke-width:.55;stroke-dasharray:3 2;vector-effect:non-scaling-stroke}
+.v11-anchor{fill:#fff;stroke:#111;stroke-width:.5;cursor:move;vector-effect:non-scaling-stroke}
+.v11-handle{fill:#a8a8b0;stroke:#111;stroke-width:.4;cursor:crosshair;vector-effect:non-scaling-stroke}
+.v11-hline{stroke:#777780;stroke-width:.45;vector-effect:non-scaling-stroke}
+.v11-label{fill:#d0d0d5;font-size:4px}.v11-measure{fill:#8e8e96;font-size:3px}
+.v11-empty{position:absolute;inset:0;display:grid;place-items:center;color:#999;font-size:11px}
+.v11-status{position:absolute;left:12px;bottom:12px;background:#222225;border:1px solid #39393e;border-radius:6px;padding:7px 9px;color:#aaa;font-size:9px;z-index:3}
+
+
+/* ===== V12 FUNCTIONAL CORE ===== */
+body.v12-core .v6-rail,body.v12-core .v6-inspector,body.v12-core .v6-guide,body.v12-core .v7-ruler-x,body.v12-core .v7-breadcrumb,body.v12-core .v7-sync,body.v12-core .v8-engine,body.v12-core .v11-switch,body.v12-core .v11-pattern-stage{display:none!important}
+.v12-shell{position:fixed;z-index:200;inset:0;background:#f5f5f7;color:#1d1d1f;display:none;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',sans-serif}
+body.v12-core .v12-shell{display:grid;grid-template-columns:260px 1fr 270px;grid-template-rows:48px 1fr 44px;grid-template-areas:"top top top" "left center right" "foot foot foot"}
+.v12-top{grid-area:top;display:flex;align-items:center;gap:8px;padding:0 16px;border-bottom:1px solid #e6e6e8;background:rgba(255,255,255,.94);backdrop-filter:blur(18px)}.v12-brand{font-family:"Times New Roman",serif;letter-spacing:.16em;font-size:13px;margin-right:auto}.v12-tabs{display:flex;gap:3px}.v12-tabs button,.v12-btn{border:1px solid #e1e1e5;background:#f5f5f7;color:#3a3a3c;border-radius:8px;padding:7px 10px;font-size:11px;cursor:pointer}.v12-tabs button.active,.v12-btn.primary{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
+.v12-left{grid-area:left;border-right:1px solid #e6e6e8;background:#fff;padding:16px;overflow:auto}.v12-right{grid-area:right;border-left:1px solid #e6e6e8;background:#fff;padding:16px;overflow:auto}.v12-center{grid-area:center;position:relative;overflow:hidden;background:#171719}.v12-foot{grid-area:foot;border-top:1px solid #e6e6e8;background:#fff;display:flex;align-items:center;gap:7px;padding:0 12px;font-size:9px;color:#888}
+.v12-left h3,.v12-right h3{font-size:11px;letter-spacing:.04em;color:#6e6e73;margin:8px 0}.v12-field{display:grid;grid-template-columns:1fr 78px;align-items:center;gap:7px;margin:6px 0;font-size:9px;color:#aaa}.v12-field input,.v12-field select{width:100%;box-sizing:border-box;background:#f5f5f7;color:#1d1d1f;border:1px solid #dedee2;border-radius:7px;padding:7px}
+.v12-section{border-top:1px solid #e6e6e8;margin-top:10px;padding-top:8px}.v12-note{font-size:10px;line-height:1.5;color:#77777d}.v12-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px}.v12-actions .v12-btn{padding:7px 5px}
+#v12Pattern,#v12Three{position:absolute;inset:0;width:100%;height:100%}#v12Three{display:none}.v12-grid{stroke:#222227;stroke-width:.35}.v12-piece{fill:#d8d4ca;fill-opacity:.10;stroke:#e5e1d9;stroke-width:1;vector-effect:non-scaling-stroke}.v12-piece.sel{fill-opacity:.18;stroke-width:1.5}.v12-anchor{fill:#fff;stroke:#111;stroke-width:.45;cursor:move;vector-effect:non-scaling-stroke}.v12-handle{fill:#92929b;stroke:#111;stroke-width:.4;cursor:crosshair;vector-effect:non-scaling-stroke}.v12-hline{stroke:#686870;stroke-width:.45;vector-effect:non-scaling-stroke}.v12-label{fill:#c8c8ce;font-size:4px}.v12-dim{fill:#888891;font-size:2.7px}.v12-toolbar{position:absolute;z-index:5;left:12px;top:12px;display:flex;gap:4px;background:#202023;border:1px solid #38383e;border-radius:6px;padding:4px}.v12-toolbar button{border:0;background:#2c2c30;color:#aaa;border-radius:4px;padding:6px 8px;font-size:9px}.v12-toolbar button.active{background:#eee;color:#111}
+.v12-sew-anim{position:absolute;inset:0;pointer-events:none;display:none}.v12-sew-anim.active{display:block}.v12-thread{fill:none;stroke:#e7e2d8;stroke-width:1;stroke-dasharray:5 4;animation:v12dash .7s linear infinite}@keyframes v12dash{to{stroke-dashoffset:-18}}
+.v12-status{margin-left:auto;color:#a8c7af}.v12-log{font-size:10px;line-height:1.55;color:#65656c;white-space:pre-wrap}.v12-model-note{position:absolute;left:12px;bottom:12px;background:#202023;border:1px solid #39393f;border-radius:6px;padding:7px 9px;font-size:9px;color:#999}
+/* V12 readability and responsive workspace refinements */
+.v12-left h3,.v12-right h3{font-size:11px;color:#6e6e73;letter-spacing:.05em}.v12-field{font-size:11px;color:#55555b;gap:9px;margin:9px 0}.v12-field input,.v12-field select{font:inherit;font-size:12px;padding:8px;border-radius:7px;background:#f5f5f7;border-color:#dedee2}.v12-tabs button,.v12-btn{font-size:11px;border-radius:7px;transition:background-color .14s ease,color .14s ease,border-color .14s ease}.v12-tabs button:hover,.v12-btn:hover{border-color:#b9b9c0;background:#ededf0;color:#1d1d1f}.v12-tabs button.active,.v12-btn.primary{background:#f3f2ef;color:#19191b;border-color:#f3f2ef}.v12-tabs button:focus-visible,.v12-btn:focus-visible,.v12-field input:focus-visible,.v12-field select:focus-visible{outline:2px solid #a8c7ff;outline-offset:2px}.v12-note{font-size:10px;line-height:1.5}
+@media(max-width:900px){body.v12-core .v12-shell{grid-template-columns:minmax(175px,24vw) minmax(0,1fr) minmax(175px,24vw);grid-template-rows:48px minmax(0,1fr) 44px;grid-template-areas:"top top top" "left center right" "foot foot foot"}.v12-right{display:block;padding:8px}.v12-left{padding:8px}.v12-field{grid-template-columns:minmax(0,1fr) 64px}.v12-right .v12-actions{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){body.v12-core .v12-shell{grid-template-columns:1fr;grid-template-rows:48px minmax(220px,40vh) minmax(220px,34vh) minmax(170px,24vh) 38px;grid-template-areas:"top" "center" "left" "right" "foot";overflow:auto}.v12-top{position:sticky;top:0;z-index:2;flex-wrap:nowrap}.v12-brand{font-size:10px;letter-spacing:.07em}.v12-tabs button,.v12-btn{padding:6px 7px;font-size:10px}.v12-left,.v12-right{overflow:auto;border-right:0;border-left:0;border-top:1px solid #e6e6e8;padding:10px}.v12-field{grid-template-columns:minmax(0,1fr) 84px;font-size:10px}.v12-foot{position:sticky;bottom:0;z-index:2;gap:4px;overflow:auto;white-space:nowrap;padding:0 7px;font-size:8px}.v12-model-note{font-size:9px;max-width:60%;line-height:1.4}}
+
+@media(max-width:900px){body.v12-core .v12-shell{grid-template-columns:220px 1fr;grid-template-areas:"top top" "left center" "foot foot"}.v12-right{display:none}}
+
 </style>
 </head>
 <body>
@@ -1467,32 +1523,51 @@ function updateSystemGeometry(sys){
 function closestPointSegment(p,a,b){const ab=b.clone().sub(a),t=THREE.MathUtils.clamp(p.clone().sub(a).dot(ab)/(ab.lengthSq()||1),0,1);return a.clone().addScaledVector(ab,t);}
 function collideCapsuleV3(p,a,b,r,idx){const q=closestPointSegment(p,a,b),d=p.clone().sub(q),len=d.length(),margin=state.fabricThickness/28+state.skinOffset/28;if(len<r+margin){if(len<1e-6)d.set(0,0,1);else d.multiplyScalar(1/len);p.copy(q).addScaledVector(d,r+margin);clothSystem.lastCollision[idx]=1;}}
 function solveAvatarCollisionsV3(){const pose=getAvatarPose(),m=state.skinOffset/28;const ell=[[pose.chest,new THREE.Vector3(pose.chestX+m,.83*pose.f+m,state.wearerChest/260*pose.f+m)],[pose.waist,new THREE.Vector3(pose.waistX+m,.50*pose.f+m,state.wearerWaist/270*pose.f+m)],[pose.hip,new THREE.Vector3(pose.hipX+m,.40*pose.f+m,state.wearerHip/270*pose.f+m)],[pose.head,new THREE.Vector3(.255*pose.f+m,.31*pose.f+m,.23*pose.f+m)]];clothSystem.lastCollision.fill(0);clothSystem.positions.forEach((p,i)=>{if(!clothSystem.invMass[i])return;for(const [c,r] of ell)collideEllipsoid(p,c,r,i);['left','right'].forEach(side=>{const a=pose.arms[side];collideCapsuleV3(p,a.shoulder,a.elbow,.16*pose.f,i);collideCapsuleV3(p,a.elbow,a.wrist,.125*pose.f,i);});});}
-function solveSelfCollisionV3(){if(!state.selfCollision||!clothSystem)return;const sys=clothSystem,r=Math.max(state.selfCollisionRadius/28,state.fabricThickness/28*1.4),cell=r*1.15,hash=new Map(),key=(x,y,z)=>`${x},${y},${z}`;for(let i=0;i<sys.positions.length;i++){const p=sys.positions[i],ix=Math.floor(p.x/cell),iy=Math.floor(p.y/cell),iz=Math.floor(p.z/cell),k=key(ix,iy,iz);if(!hash.has(k))hash.set(k,[]);hash.get(k).push(i);}const passes=Math.max(1,state.collisionPasses);for(let pass=0;pass<passes;pass++){for(let i=0;i<sys.positions.length;i++){const p=sys.positions[i],ix=Math.floor(p.x/cell),iy=Math.floor(p.y/cell),iz=Math.floor(p.z/cell);for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)for(let dz=-1;dz<=1;dz++){const bucket=hash.get(key(ix+dx,iy+dy,iz+dz));if(!bucket)continue;for(const j of bucket){if(j<=i)continue;const pair=i<j?`${i}:${j}`:`${j}:${i}`;if(sys.neighborPairs.has(pair))continue;if(sys.particlePiece[i]===sys.particlePiece[j]&&Math.abs(i-j)<3)continue;const q=sys.positions[j],vx=q.x-p.x,vy=q.y-p.y,vz=q.z-p.z,dist=Math.sqrt(vx*vx+vy*vy+vz*vz)||1e-6;if(dist>=r)continue;const wa=sys.invMass[i],wb=sys.invMass[j],sum=wa+wb;if(!sum)continue;const push=(r-dist)/sum*.48,nx=vx/dist,ny=vy/dist,nz=vz/dist;if(wa){p.x-=nx*push*wa;p.y-=ny*push*wa;p.z-=nz*push*wa;}if(wb){q.x+=nx*push*wb;q.y+=ny*push*wb;q.z+=nz*push*wb;}}}}}}}
-solveCollisions=function(){solveAvatarCollisionsV3();solveSelfCollisionV3();};
-stepCloth=function(dt){if(!clothSystem)return;const sys=clothSystem;updatePinnedTargets();for(let i=0;i<sys.positions.length;i++){if(!sys.invMass[i]){sys.positions[i].copy(sys.rest[i]);sys.prev[i].copy(sys.rest[i]);continue;}const p=sys.positions[i],pr=sys.prev[i],vx=(p.x-pr.x)*state.damping,vy=(p.y-pr.y)*state.damping,vz=(p.z-pr.z)*state.damping;pr.copy(p);p.x+=vx;p.y+=vy-state.gravity*dt*dt;p.z+=vz;}const it=state.simQuality==='accurate'?Math.min(26,state.solverIterations+5):state.simQuality==='draft'?Math.max(3,state.solverIterations-3):state.solverIterations;for(let n=0;n<it;n++){for(const c of sys.constraints)solveDistance(c);solveAvatarCollisionsV3();if(state.selfCollision&&(n===it-1||n===Math.floor(it/2)))solveSelfCollisionV3();}for(let i=0;i<sys.positions.length;i++)if(sys.lastCollision[i]){const p=sys.positions[i],pr=sys.prev[i],f=THREE.MathUtils.clamp(state.friction,0,1);pr.x=THREE.MathUtils.lerp(pr.x,p.x,f*.34);pr.y=THREE.MathUtils.lerp(pr.y,p.y,f*.34);pr.z=THREE.MathUtils.lerp(pr.z,p.z,f*.34);}updateClothGeometry();};
-updateClothColors=function(){const sys=clothSystem;if(!sys?.geo)return;const mode=state.analysisMode||$('toolbarAnalysis').value;sys.mesh.material.vertexColors=mode==='strain';const arr=sys.geo.attributes.color.array;for(let i=0;i<sys.positions.length;i++){let ratio=1;const p=sys.positions[i],adj=sys.constraintAdj?.[i]||[];for(const ci of adj){const c=sys.constraints[ci];if(c.type==='bend'||c.type==='seam')continue;const j=c.a===i?c.b:c.a;ratio=Math.max(ratio,p.distanceTo(sys.positions[j])/(c.rest||1));}const col=mode==='strain'?strainColor(ratio):new THREE.Color(1,1,1);arr[i*3]=col.r;arr[i*3+1]=col.g;arr[i*3+2]=col.b;}sys.geo.attributes.color.needsUpdate=true;sys.mesh.material.needsUpdate=true;};
-
-// Add collar and hood pieces plus seam legend to the generated 2D sheet.
-const _baseUpdatePattern=updatePattern;
-updatePattern=function(){_baseUpdatePattern();const svg=$('patternSvg');if(!svg)return;const ns='http://www.w3.org/2000/svg';const g=document.createElementNS(ns,'g');g.setAttribute('id','studioV3PatternPieces');const seamColor=id=>seamOn(id)?'#d5d5db':'#56565f';
-  const collar=document.createElementNS(ns,'path');collar.setAttribute('d','M 715 565 L 1010 565 L 1010 603 L 715 603 Z');collar.setAttribute('class','pattern-piece');g.appendChild(collar);const ct=document.createElementNS(ns,'text');ct.setAttribute('x','862');ct.setAttribute('y','588');ct.setAttribute('text-anchor','middle');ct.setAttribute('class','piece-name');ct.textContent='COLLAR RIB · CUT 1';g.appendChild(ct);
-  if(state.garment==='hoodie'){[['LEFT HOOD',760],['RIGHT HOOD',930]].forEach(([name,x])=>{const p=document.createElementNS(ns,'path');p.setAttribute('d',`M ${x} 380 Q ${x+70} 325 ${x+115} 375 L ${x+105} 540 Q ${x+55} 555 ${x} 530 Z`);p.setAttribute('class','pattern-piece');g.appendChild(p);const t=document.createElementNS(ns,'text');t.setAttribute('x',x+56);t.setAttribute('y','455');t.setAttribute('text-anchor','middle');t.setAttribute('class','piece-name');t.textContent=name;g.appendChild(t);});}
-  const legend=document.createElementNS(ns,'text');legend.setAttribute('x','48');legend.setAttribute('y','674');legend.setAttribute('class','seamLegend');legend.setAttribute('fill','#aaa');legend.textContent=`SEWING MAP · ${Object.values(readSeamConfig()).filter(x=>x.enabled).length} active relationships · sleeve caps, underarms, collar${state.garment==='hoodie'?', hood':''}`;g.appendChild(legend);svg.appendChild(g);
-};
-
-// Self-collision controls only require reassembly, not a new draft.
-['selfCollision','selfCollisionRadius','collisionPasses'].forEach(id=>$(id).addEventListener('input',()=>{setStateFromControls();if(clothSystem)showToast('Collision settings updated for the running solver.');}));
-
-// Studio V3 tech-spec export includes sewing, pose, collisions and measured fabric calibration.
-$('exportJson').addEventListener('click',e=>{e.stopImmediatePropagation();setStateFromControls();const data={brand:'MONTELI',version:'Atelier Studio V3',units:'cm',garment:state.garment,garment_measurement_basis:'flat_lay',measurements:{body_length:state.bodyLength,chest_width:state.chestWidth,waist_width:state.waistWidth,hem_width:state.hemWidth,shoulder_width:state.shoulderWidth,sleeve_length:state.sleeveLength,bicep_width:state.bicepWidth,cuff_opening:state.cuffWidth,armhole_depth:state.armholeDepth,neck_opening:state.neckOpening,collar_rib_width:state.collarWidth,seam_allowance:state.seamAllowance},fit:state.fit,wearer:{height:state.wearerHeight,chest_circumference:state.wearerChest,waist_circumference:state.wearerWaist,hip_circumference:state.wearerHip,shoulder_width:state.wearerShoulder,upper_arm_circumference:state.wearerBicep,wrist_circumference:state.wearerWrist,pose:{left_arm_raise_deg:state.leftArmRaise,right_arm_raise_deg:state.rightArmRaise,left_elbow_bend_deg:state.leftElbowBend,right_elbow_bend_deg:state.rightElbowBend,torso_lean_deg:state.torsoLean,skin_offset_cm:state.skinOffset}},fabric:{preset:state.fabricPreset,composition:state.composition,gsm:state.gsm,surface:state.surface,construction:state.construction,physics:{thickness_cm:state.fabricThickness,particle_distance_cm:state.particleDistance,warp_stretch_limit_pct:state.stretchWarp,weft_stretch_limit_pct:state.stretchWeft,bias_shear_pct:state.shear,bending_stiffness:state.bend,friction:state.friction,damping:state.damping,solver_iterations:state.solverIterations,gravity:state.gravity,quality:state.simQuality,self_collision:state.selfCollision,self_collision_radius_cm:state.selfCollisionRadius,collision_passes:state.collisionPasses},measured_swatch:state.swatchCalibration},sewing:readSeamConfig(),neckline:{rib:state.rib,topstitch_rows:state.stitches,shoulder_to_shoulder_neck_tape:state.neckTape},appearance:{garment_color:state.garmentColor,hardware:state.hardware,plaque:state.plaque,zipper:state.zipper,welt_pockets:state.welt},artwork:{included:!!state.art,side:state.artSide,x:state.artX,y:state.artY,scale:state.artScale},simulation:{pattern_generated:patternGenerated,assembled:garmentAssembled,simulated:simulationCompleted,finalized:state.designFinalized,pieces:clothSystem?Object.keys(clothSystem.pieces):[]}};const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.download=`monteli-${state.garment}-studio-v3-tech-spec.json`;a.href=URL.createObjectURL(blob);a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);showToast('Studio V3 tech spec exported.');},true);
-
-// Keep reset defaults for the new controls.
-$('clearProject').addEventListener('click',()=>{setTimeout(()=>{if(!$('leftArmRaise'))return;$('leftArmRaise').value=20;$('rightArmRaise').value=20;$('leftElbowBend').value=8;$('rightElbowBend').value=8;$('torsoLean').value=0;$('skinOffset').value=.30;$('selfCollision').checked=true;$('selfCollisionRadius').value=.55;$('collisionPasses').value=2;document.querySelectorAll('.seam-enabled').forEach(x=>x.checked=true);refreshSeamRows();setStateFromControls();updatePoseOutputs();},0);});
-
+function solveSelfCollisionV3(){
+  if(!state.selfCollision||!clothSystem)return;
+  const sys=clothSystem;
+  const r=Math.max(state.selfCollisionRadius/28,state.fabricThickness/28*1.4);
+  const cell=r*1.15, hash=new Map(), key=(x,y,z)=>`${x},${y},${z}`;
+  for(let i=0;i<sys.positions.length;i++){
+    const p=sys.positions[i],ix=Math.floor(p.x/cell),iy=Math.floor(p.y/cell),iz=Math.floor(p.z/cell),k=key(ix,iy,iz);
+    if(!hash.has(k))hash.set(k,[]);
+    hash.get(k).push(i);
+  }
+  const passes=Math.max(1,state.collisionPasses);
+  for(let pass=0;pass<passes;pass++){
+    for(let i=0;i<sys.positions.length;i++){
+      const p=sys.positions[i],ix=Math.floor(p.x/cell),iy=Math.floor(p.y/cell),iz=Math.floor(p.z/cell);
+      for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)for(let dz=-1;dz<=1;dz++){
+        const bucket=hash.get(key(ix+dx,iy+dy,iz+dz)); if(!bucket)continue;
+        for(const j of bucket){
+          if(j<=i)continue;
+          const pair=i<j?`${i}:${j}`:`${j}:${i}`;
+          if(sys.neighborPairs.has(pair))continue;
+          if(sys.particlePiece[i]===sys.particlePiece[j]&&Math.abs(i-j)<3)continue;
+          const q=sys.positions[j],vx=q.x-p.x,vy=q.y-p.y,vz=q.z-p.z,dist=Math.sqrt(vx*vx+vy*vy+vz*vz)||1e-6;
+          if(dist>=r)continue;
+          const wa=sys.invMass[i],wb=sys.invMass[j],sum=wa+wb;if(!sum)continue;
+          const push=(r-dist)/sum*.48,nx=vx/dist,ny=vy/dist,nz=vz/dist;
+          if(wa){p.x-=nx*push*wa;p.y-=ny*push*wa;p.z-=nz*push*wa;}
+          if(wb){q.x+=nx*push*wb;q.y+=ny*push*wb;q.z+=nz*push*wb;}
+        }
+      }
+    }
+  }
+}
 function animate(){requestAnimationFrame(animate);if(state.clothSimulating&&clothSystem){const steps=state.simQuality==='accurate'?2:1;for(let i=0;i<steps;i++)stepCloth(1/60/steps);clothElapsed+=1/60;}controls.update();renderer.render(scene,camera);}
 
 // V5 bridge
 Object.assign(window,{state,garmentGroup,buildAvatar,updatePattern,setStateFromControls,showToast});
+window.MonteliEngine={
+  assemble:()=>{buildClothSystem();garmentAssembled=true;simulationCompleted=false;setWorkflow('simulate');state.showAvatar=true;$('showAvatar').checked=true;buildAvatar();setAvatarCamera('three');return {particles:clothSystem?.positions.length||0,constraints:clothSystem?.constraints.length||0,pieces:Object.keys(clothSystem?.pieces||{})};},
+  simulate:(on)=>{if(!clothSystem)return false;setSimulation(!!on);if(on){simulationCompleted=true;setWorkflow('finalize')}return true;},
+  reset:()=>{state.clothSimulating=false;setSimulation(false);resetClothPositions();},
+  attach:(host)=>{host.appendChild(renderer.domElement);const w=Math.max(1,host.clientWidth),h=Math.max(1,host.clientHeight);renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();},
+  resize:(host)=>{if(!host)return;const w=Math.max(1,host.clientWidth),h=Math.max(1,host.clientHeight);renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix();},
+  view:(which)=>{const targetY=.35,dist=7.5;if(which==='back')camera.position.set(0,targetY+.55,-dist);else if(which==='quarter')camera.position.set(dist*.48,targetY+1.05,dist*.82);else camera.position.set(0,targetY+.55,dist);controls.target.set(0,targetY,0);controls.update();},
+  clear:()=>clearCloth()
+};
 Object.defineProperty(window,'simulationCompleted',{get:()=>simulationCompleted});
 
 setStateFromControls(); buildGarment(); updatePattern(); setWorkflow('pattern'); resize(); animate();
@@ -1917,6 +1992,209 @@ const pages={
 function render(k='overview'){document.querySelectorAll('[data-v9]').forEach(b=>b.classList.toggle('active',b.dataset.v9===k));$('v9Content').innerHTML=pages[k]()}
 $('v9PlatformBtn').onclick=()=>{$('v9Center').classList.add('open');render('overview')};$('v9Close').onclick=()=>$('v9Center').classList.remove('open');document.querySelectorAll('[data-v9]').forEach(b=>b.onclick=()=>render(b.dataset.v9));
 window.MonteliPlatform={GradeRuleSet,addDart,addPleat,slashSpread,SewingEngine,KNITS,zoneMaterial,avatarFromMeasurements,POSES,fitMetrics,estimateMarker,BOM,RevisionStore,standardDXF,interchangeManifest,interpret};
+</script>
+
+
+<section class="v10-stage" id="v10Stage">
+ <div class="v10-toolbar">
+  <button id="v10Select" class="active">↖ Select</button><button id="v10Curve">⌁ Curve</button><button id="v10Add">＋ Point</button><button id="v10Delete">− Point</button>
+  <button id="v10Undo">↶</button><button id="v10Redo">↷</button><button id="v10Fit">Fit Pattern</button><button id="v10Front">Front</button><button id="v10Back">Back</button>
+ </div>
+ <svg id="v10Svg" viewBox="0 0 180 120" preserveAspectRatio="xMidYMid meet"></svg>
+ <div class="v10-info" id="v10Info">Pattern is generated from your flat-lay measurements in centimeters. Drag white anchors or gray Bézier handles. Changes update the pattern immediately.</div>
+</section>
+<aside class="v10-inspector" id="v10Inspector">
+ <h3>Pattern Inspector</h3>
+ <div class="v10-note">Visual + text editing are linked. Change a measurement here and the cut pieces redraw. Drag a pattern point and its exact coordinates appear below.</div>
+ <h4>Finished garment · flat lay</h4>
+ <div id="v10MeasureFields"></div>
+ <h4>Selected point</h4>
+ <div class="v10-field"><span>X position (cm)</span><input id="v10PointX" type="number" step=".1"></div>
+ <div class="v10-field"><span>Y position (cm)</span><input id="v10PointY" type="number" step=".1"></div>
+ <div class="v10-field"><span>Handle in X</span><input id="v10HinX" type="number" step=".1"></div>
+ <div class="v10-field"><span>Handle in Y</span><input id="v10HinY" type="number" step=".1"></div>
+ <div class="v10-field"><span>Handle out X</span><input id="v10HoutX" type="number" step=".1"></div>
+ <div class="v10-field"><span>Handle out Y</span><input id="v10HoutY" type="number" step=".1"></div>
+ <h4>Construction</h4>
+ <div class="v10-field"><span>Seam allowance (cm)</span><input id="v10SA" type="number" min="0" step=".1"></div>
+ <div class="v10-actions"><button id="v10Mirror">Mirror Piece</button><button id="v10Reset">Redraft</button><button id="v10Apply" class="primary">Apply Pattern</button><button id="v10To3D" class="primary">Assemble → 3D</button></div>
+</aside>
+<div class="v10-toast" id="v10Toast"></div>
+
+
+<script>
+(()=>{
+const $=id=>document.getElementById(id), svg=$('v10Svg'), NS='http://www.w3.org/2000/svg';
+const mids=['bodyLength','chestWidth','waistWidth','hemWidth','shoulderWidth','sleeveLength','bicepWidth','cuffWidth','armholeDepth','neckOpening','collarWidth','seamAllowance'];
+const labels={bodyLength:'Body length',chestWidth:'Chest width',waistWidth:'Waist width',hemWidth:'Hem width',shoulderWidth:'Shoulder width',sleeveLength:'Sleeve length',bicepWidth:'Bicep width',cuffWidth:'Cuff width',armholeDepth:'Armhole depth',neckOpening:'Neck opening',collarWidth:'Collar width',seamAllowance:'Seam allowance'};
+let pieces=[],selected={piece:0,point:0},history=[],future=[],mode='select',scale=1,pan={x:0,y:0};
+const val=id=>+($(id)?.value||0), E=(tag,a={})=>{const e=document.createElementNS(NS,tag);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e};
+function clone(x){return JSON.parse(JSON.stringify(x))}
+function toast(t){$('v10Toast').textContent=t;$('v10Toast').classList.add('show');setTimeout(()=>$('v10Toast').classList.remove('show'),1300)}
+function push(){history.push(clone(pieces));if(history.length>60)history.shift();future=[]}
+function pt(x,y,name,type='smooth'){return {x,y,name,type,hin:{x,y},hout:{x,y}}}
+function handles(p,prev,next,str=.22){const dx=next.x-prev.x,dy=next.y-prev.y;p.hin={x:p.x-dx*str,y:p.y-dy*str};p.hout={x:p.x+dx*str,y:p.y+dy*str};return p}
+function draft(){
+ simulating=false;if(three){three.stop?.();three=null;garment=null;$('v12Three').innerHTML='';show2D()}
+ const L=val('bodyLength')||68,C=val('chestWidth')||53,W=val('waistWidth')||50,H=val('hemWidth')||52,S=val('shoulderWidth')||46,A=val('armholeDepth')||24,N=val('neckOpening')||19,SL=val('sleeveLength')||22,B=val('bicepWidth')||19,CF=val('cuffWidth')||17;
+ const x0=20,y0=15, halfS=S/2, halfN=N/2;
+ let front=[
+ pt(x0+halfN,y0,'neck-center','smooth'),pt(x0+halfS,y0+3,'shoulder','corner'),pt(x0+C,y0+A,'underarm','smooth'),
+ pt(x0+W,y0+L*.62,'waist','smooth'),pt(x0+H,y0+L,'hem-side','corner'),pt(x0,y0+L,'hem-center','corner')
+ ];
+ front[0].hin={x:front[0].x-5,y:front[0].y};front[0].hout={x:front[0].x+5,y:front[0].y+4};
+ front[1].hin={x:front[1].x-4,y:front[1].y-1};front[1].hout={x:front[1].x+3,y:front[1].y+2};
+ handles(front[2],front[1],front[3],.18);handles(front[3],front[2],front[4],.12);
+ let back=clone(front).map(p=>({...p,x:p.x+72,name:p.name}));back[0].hout.y-=3;
+ const sx=22,sy=92;
+ let sleeve=[pt(sx,sy,'cap-center','smooth'),pt(sx+B,sy+8,'cap-front','smooth'),pt(sx+CF,sy+SL,'cuff-front','corner'),pt(sx-CF,sy+SL,'cuff-back','corner'),pt(sx-B,sy+8,'cap-back','smooth')];
+ handles(sleeve[0],sleeve[4],sleeve[1],.25);handles(sleeve[1],sleeve[0],sleeve[2],.15);handles(sleeve[4],sleeve[3],sleeve[0],.15);
+ pieces=[{name:'Front',points:front,closed:true},{name:'Back',points:back,closed:true},{name:'Sleeve',points:sleeve,closed:true}];
+ selected={piece:0,point:0};render();toast('Pattern generated from your measurements');
+}
+function pathOf(points){
+ if(!points.length)return '';let d=`M ${points[0].x} ${points[0].y}`;
+ for(let i=0;i<points.length;i++){const a=points[i],b=points[(i+1)%points.length];d+=` C ${a.hout.x} ${a.hout.y}, ${b.hin.x} ${b.hin.y}, ${b.x} ${b.y}`}
+ return d+' Z'
+}
+function render(){
+ svg.innerHTML='';
+ const defs=E('defs');const pat=E('pattern',{id:'grid',width:5,height:5,patternUnits:'userSpaceOnUse'});pat.appendChild(E('path',{d:'M 5 0 L 0 0 0 5',fill:'none',class:'v10-gridline'}));defs.appendChild(pat);svg.appendChild(defs);svg.appendChild(E('rect',{x:0,y:0,width:180,height:120,fill:'url(#grid)'}));
+ pieces.forEach((pc,pi)=>{
+  const g=E('g',{'data-piece':pi});const path=E('path',{d:pathOf(pc.points),class:'v10-piece'+(selected.piece===pi?' selected':'')});g.appendChild(path);
+  g.appendChild(E('text',{x:pc.points[0].x+8,y:pc.points[0].y+25,class:'v10-label'}));g.lastChild.textContent=pc.name;
+  if(selected.piece===pi)pc.points.forEach((p,i)=>{
+   g.appendChild(E('line',{x1:p.hin.x,y1:p.hin.y,x2:p.hout.x,y2:p.hout.y,class:'v10-handle-line'}));
+   const hi=E('circle',{cx:p.hin.x,cy:p.hin.y,r:1,class:'v10-control','data-kind':'hin','data-p':i});const ho=E('circle',{cx:p.hout.x,cy:p.hout.y,r:1,class:'v10-control','data-kind':'hout','data-p':i});const an=E('rect',{x:p.x-1.2,y:p.y-1.2,width:2.4,height:2.4,class:'v10-anchor','data-kind':'anchor','data-p':i});g.append(hi,ho,an);
+  });svg.appendChild(g)
+ });
+ bindDrag();syncInspector()
+}
+function svgPoint(evt){const q=svg.createSVGPoint();q.x=evt.clientX;q.y=evt.clientY;return q.matrixTransform(svg.getScreenCTM().inverse())}
+function bindDrag(){
+ svg.querySelectorAll('[data-kind]').forEach(el=>el.onpointerdown=e=>{e.stopPropagation();push();const pi=+el.dataset.p,kind=el.dataset.kind;selected.point=pi;el.setPointerCapture(e.pointerId);el.onpointermove=ev=>{const q=svgPoint(ev),p=pieces[selected.piece].points[pi];if(kind==='anchor'){const dx=q.x-p.x,dy=q.y-p.y;p.x=q.x;p.y=q.y;p.hin.x+=dx;p.hin.y+=dy;p.hout.x+=dx;p.hout.y+=dy}else p[kind]={x:q.x,y:q.y};render()};el.onpointerup=()=>{el.onpointermove=null;render();toast('Pattern geometry updated')}})
+ svg.querySelectorAll('[data-piece]').forEach(g=>g.onclick=e=>{if(e.target.dataset.kind)return;selected.piece=+g.dataset.piece;selected.point=0;render()})
+}
+function syncInspector(){const p=pieces[selected.piece]?.points[selected.point];if(!p)return;for(const [id,key] of [['v10PointX','x'],['v10PointY','y']])$(id).value=p[key].toFixed(1);$('v10HinX').value=p.hin.x.toFixed(1);$('v10HinY').value=p.hin.y.toFixed(1);$('v10HoutX').value=p.hout.x.toFixed(1);$('v10HoutY').value=p.hout.y.toFixed(1);$('v10SA').value=val('seamAllowance')||1}
+function setPoint(){const p=pieces[selected.piece]?.points[selected.point];if(!p)return;push();p.x=+$('v10PointX').value;p.y=+$('v10PointY').value;p.hin={x:+$('v10HinX').value,y:+$('v10HinY').value};p.hout={x:+$('v10HoutX').value,y:+$('v10HoutY').value};render()}
+['v10PointX','v10PointY','v10HinX','v10HinY','v10HoutX','v10HoutY'].forEach(id=>$(id).onchange=setPoint);
+$('v10MeasureFields').innerHTML=mids.filter(x=>x!=='seamAllowance').map(id=>`<label class="v10-field"><span>${labels[id]} (cm)</span><input data-v10m="${id}" type="number" step=".1" value="${val(id)}"></label>`).join('');
+document.querySelectorAll('[data-v10m]').forEach(i=>i.onchange=()=>{push();const source=$(i.dataset.v10m);if(source){source.value=i.value;source.dispatchEvent(new Event('input',{bubbles:true}))}draft()});
+$('v10SA').onchange=()=>{if($('seamAllowance')){$('seamAllowance').value=$('v10SA').value;$('seamAllowance').dispatchEvent(new Event('input',{bubbles:true}))}toast('Seam allowance updated')};
+$('v10Undo').onclick=()=>{if(!history.length)return;future.push(clone(pieces));pieces=history.pop();render()};$('v10Redo').onclick=()=>{if(!future.length)return;history.push(clone(pieces));pieces=future.pop();render()};
+$('v10Reset').onclick=draft;$('v10Apply').onclick=()=>{window.updatePattern?.();toast('Pattern applied to project')};$('v10To3D').onclick=()=>{window.updatePattern?.();document.body.classList.remove('v10-pattern');$('simulateBtn')?.click();toast('Assembled pattern sent to 3D')};
+$('v10Front').onclick=()=>{selected.piece=0;render()};$('v10Back').onclick=()=>{selected.piece=1;render()};$('v10Fit').onclick=()=>{svg.setAttribute('viewBox','0 0 180 120')};
+$('v10Mirror').onclick=()=>{push();const pc=pieces[selected.piece],cx=pc.points.reduce((a,p)=>a+p.x,0)/pc.points.length;pc.points.forEach(p=>{p.x=2*cx-p.x;let hi=p.hin,hout=p.hout;p.hin={x:2*cx-hout.x,y:hout.y};p.hout={x:2*cx-hi.x,y:hi.y}});pc.points.reverse();render()};
+$('v10Select').onclick=()=>{mode='select';$('v10Select').classList.add('active');$('v10Curve').classList.remove('active')};$('v10Curve').onclick=()=>{mode='curve';$('v10Curve').classList.add('active');$('v10Select').classList.remove('active');toast('Drag gray handles to reshape curves')};
+$('v10Add').onclick=()=>{push();const pc=pieces[selected.piece],i=selected.point,a=pc.points[i],b=pc.points[(i+1)%pc.points.length],np=pt((a.x+b.x)/2,(a.y+b.y)/2,'new-point');pc.points.splice(i+1,0,np);selected.point=i+1;render()};
+$('v10Delete').onclick=()=>{const pc=pieces[selected.piece];if(pc.points.length<=3)return;push();pc.points.splice(selected.point,1);selected.point=Math.max(0,selected.point-1);render()};
+/* Hook guided Pattern step so primary action opens the actual visual CAD instead of merely advancing */
+function openCAD(){document.body.classList.add('v10-pattern');document.querySelectorAll('[data-v10m]').forEach(i=>i.value=val(i.dataset.v10m));draft()}
+window.openMonteliVisualCAD=openCAD;
+const observer=new MutationObserver(()=>{const body=$('v6InspectorBody');if(!body)return;const counter=$('v6StepCounter')?.textContent||'';if(counter.includes('4 of 8')){const buttons=[...body.querySelectorAll('button')];buttons.forEach(b=>{if(/generate 2d pattern|edit pattern/i.test(b.textContent)){b.onclick=openCAD;b.textContent=/generate/i.test(b.textContent)?'Generate & View Pattern':'Open Visual Pattern Editor'}})}});observer.observe(document.body,{subtree:true,childList:true});
+/* also make clicking Pattern tool open CAD after selecting its guided step */
+document.querySelectorAll('.v6-tool').forEach(b=>{if(/pattern/i.test(b.textContent||''))b.addEventListener('dblclick',openCAD)});
+draft();
+})();
+</script>
+
+
+<div class="v11-switch"><button id="v11PatternBtn">2D PATTERN</button><button id="v11GarmentBtn" class="active">3D GARMENT</button></div>
+<section class="v11-pattern-stage" id="v11PatternStage">
+ <svg id="v11Svg" viewBox="0 0 210 125" preserveAspectRatio="xMidYMid meet"></svg>
+ <div class="v11-status" id="v11Status">Live pattern · generated from your flat-lay measurements in cm · drag white points to edit</div>
+</section>
+
+
+<script>
+(()=>{
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg', svg=$('v11Svg');
+const val=id=>+($(id)?.value||0);
+let pcs=[],drag=null;
+const el=(tag,a={})=>{const x=document.createElementNS(NS,tag);Object.entries(a).forEach(([k,v])=>x.setAttribute(k,v));return x};
+function P(x,y,n){return{x,y,n,hin:{x,y},hout:{x,y}}}
+function curve(p,prev,next,k=.18){p.hin={x:p.x-(next.x-prev.x)*k,y:p.y-(next.y-prev.y)*k};p.hout={x:p.x+(next.x-prev.x)*k,y:p.y+(next.y-prev.y)*k}}
+function build(){
+ const L=val('bodyLength')||68,C=val('chestWidth')||53,W=val('waistWidth')||50,H=val('hemWidth')||52,S=val('shoulderWidth')||46,A=val('armholeDepth')||24,N=val('neckOpening')||19,SL=val('sleeveLength')||22,B=val('bicepWidth')||19,CF=val('cuffWidth')||17,sa=val('seamAllowance')||1;
+ const ox=12,oy=10, hs=S/2,hn=N/2;
+ const front=[P(ox,oy+6,'CF neck'),P(ox+hn,oy,'neck'),P(ox+hs,oy+3,'shoulder'),P(ox+C,oy+A,'underarm'),P(ox+W,oy+L*.62,'waist'),P(ox+H,oy+L,'hem side'),P(ox,oy+L,'CF hem')];
+ curve(front[1],front[0],front[2],.16);curve(front[3],front[2],front[4],.18);curve(front[4],front[3],front[5],.1);
+ const back=front.map(p=>JSON.parse(JSON.stringify(p)));back.forEach(p=>{p.x+=72});back[0].y=oy+3;back[1].y=oy;
+ const sx=155,sy=18;const sleeve=[P(sx,sy,'cap'),P(sx+B,sy+9,'front cap'),P(sx+CF,sy+SL+18,'front cuff'),P(sx-CF,sy+SL+18,'back cuff'),P(sx-B,sy+9,'back cap')];
+ curve(sleeve[0],sleeve[4],sleeve[1],.25);curve(sleeve[1],sleeve[0],sleeve[2],.16);curve(sleeve[4],sleeve[3],sleeve[0],.16);
+ pcs=[{name:'FRONT',pts:front,sa},{name:'BACK',pts:back,sa},{name:'SLEEVE',pts:sleeve,sa}];render()
+}
+function dpath(a){let d=`M${a[0].x},${a[0].y}`;for(let i=0;i<a.length;i++){const p=a[i],q=a[(i+1)%a.length];d+=` C${p.hout.x},${p.hout.y} ${q.hin.x},${q.hin.y} ${q.x},${q.y}`}return d+'Z'}
+function render(){
+ svg.innerHTML='';
+ const defs=el('defs'),pat=el('pattern',{id:'v11grid',width:5,height:5,patternUnits:'userSpaceOnUse'});pat.appendChild(el('path',{d:'M5 0L0 0 0 5',fill:'none',stroke:'#242428','stroke-width':'.35'}));defs.appendChild(pat);svg.appendChild(defs);svg.appendChild(el('rect',{width:210,height:125,fill:'url(#v11grid)'}));
+ pcs.forEach((pc,pi)=>{
+  const path=el('path',{d:dpath(pc.pts),class:'v11-piece'});svg.appendChild(path);
+  const label=el('text',{x:pc.pts.reduce((a,p)=>a+p.x,0)/pc.pts.length-5,y:pc.pts.reduce((a,p)=>a+p.y,0)/pc.pts.length,class:'v11-label'});label.textContent=pc.name;svg.appendChild(label);
+  pc.pts.forEach((p,i)=>{
+   svg.appendChild(el('line',{x1:p.hin.x,y1:p.hin.y,x2:p.hout.x,y2:p.hout.y,class:'v11-hline'}));
+   for(const [kind,q,cls,r] of [['hin',p.hin,'v11-handle',.8],['hout',p.hout,'v11-handle',.8],['anchor',p,'v11-anchor',1.1]]){
+    const c=el('circle',{cx:q.x,cy:q.y,r,class:cls,'data-pc':pi,'data-i':i,'data-kind':kind});svg.appendChild(c)
+   }
+  });
+ });
+ bind()
+}
+function point(e){const p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;return p.matrixTransform(svg.getScreenCTM().inverse())}
+function bind(){svg.querySelectorAll('[data-kind]').forEach(n=>n.onpointerdown=e=>{e.preventDefault();const pc=+n.dataset.pc,i=+n.dataset.i,k=n.dataset.kind,p=pcs[pc].pts[i];n.setPointerCapture(e.pointerId);n.onpointermove=ev=>{const q=point(ev);if(k==='anchor'){const dx=q.x-p.x,dy=q.y-p.y;p.x=q.x;p.y=q.y;p.hin.x+=dx;p.hin.y+=dy;p.hout.x+=dx;p.hout.y+=dy}else p[k]={x:q.x,y:q.y};render()};n.onpointerup=()=>{n.onpointermove=null;$('v11Status').textContent=`Edited ${pcs[pc].name} · ${p.n}: ${p.x.toFixed(1)}, ${p.y.toFixed(1)} cm`}})}
+function showPattern(){document.body.classList.add('v11-show-pattern');$('v11PatternBtn').classList.add('active');$('v11GarmentBtn').classList.remove('active');build()}
+function show3D(){document.body.classList.remove('v11-show-pattern');$('v11PatternBtn').classList.remove('active');$('v11GarmentBtn').classList.add('active');window.updatePattern?.()}
+$('v11PatternBtn').onclick=showPattern;$('v11GarmentBtn').onclick=show3D;
+['bodyLength','chestWidth','waistWidth','hemWidth','shoulderWidth','sleeveLength','bicepWidth','cuffWidth','armholeDepth','neckOpening','seamAllowance'].forEach(id=>$(id)?.addEventListener('input',()=>{if(document.body.classList.contains('v11-show-pattern'))build()}));
+/* Make original 2D Pattern tab open the live workspace too */
+document.querySelectorAll('button,.tab').forEach(b=>{if((b.textContent||'').trim()==='2D Pattern')b.addEventListener('click',showPattern)});
+/* When guided Pattern step is selected, show cutouts automatically */
+const mo=new MutationObserver(()=>{const c=$('v6StepCounter')?.textContent||'';if(c.includes('4 of 8')&&!document.body.classList.contains('v11-show-pattern'))showPattern()});mo.observe(document.body,{subtree:true,childList:true,characterData:true});
+build();
+window.MonteliLivePattern={build,showPattern,show3D,getPieces:()=>pcs};
+})();
+</script>
+
+
+<div class="v12-shell">
+ <header class="v12-top"><div class="v12-brand">MONTELI ATELIER</div><div class="v12-tabs"><button id="v12Tab2D" class="active">2D PATTERN</button><button id="v12Tab3D">3D FORM</button></div><button class="v12-btn" id="v12Undo">Undo</button><button class="v12-btn" id="v12Redo">Redo</button><button class="v12-btn primary" id="v12Sew">Assemble Preview</button></header>
+ <aside class="v12-left"><h3>GARMENT INPUT</h3><div class="v12-field"><span>Garment</span><select id="v12Garment"><option value="tshirt">T-Shirt</option><option value="hoodie">Hoodie</option><option value="jacket">Jacket</option></select></div><div id="v12Inputs"></div><div class="v12-section"><h3>FABRIC</h3><div class="v12-field"><span>Fabric</span><select id="v12Fabric"><option>Cotton Jersey</option><option>Milano Knit</option><option>Wool/Cashmere</option></select></div><div class="v12-field"><span>GSM</span><input id="v12Gsm" type="number" value="300"></div></div><p class="v12-note">Left side = garment specifications only. Every measurement is a finished flat-lay measurement in centimeters.</p></aside>
+ <main class="v12-center"><div class="v12-toolbar" id="v12Toolbar"><button class="active" data-tool="select">Select</button><button data-tool="curve">Curve</button><button data-tool="add">+ Point</button><button data-tool="delete">− Point</button><button id="v12Fit">Fit</button></div><svg id="v12Pattern" viewBox="0 0 220 130"></svg><div id="v12Three"></div><svg class="v12-sew-anim" id="v12SewAnim" viewBox="0 0 220 130"><path class="v12-thread" d="M58 35 C80 25 105 25 128 35"/><path class="v12-thread" d="M58 75 C80 90 105 90 128 75"/></svg><div class="v12-model-note" id="v12ModelNote">3D sewn cloth preview with avatar collision and drape simulation.</div></main>
+ <aside class="v12-right"><h3>SELECTION INSPECTOR</h3><div id="v12Selection">Select a pattern point.</div><div class="v12-section"><h3>CONSTRUCTION</h3><div class="v12-field"><span>Seam allowance</span><input id="v12SA" type="number" value="1" step=".1"></div><div class="v12-actions"><button class="v12-btn" id="v12Mirror">Mirror</button><button class="v12-btn" id="v12Redraft">Redraft</button></div></div><div class="v12-section"><h3>FORM PREVIEW</h3><div class="v12-actions"><button class="v12-btn primary" id="v12Sim">Motion Preview</button><button class="v12-btn" id="v12Pause">Pause</button><button class="v12-btn" id="v12Reset">Reset</button><button class="v12-btn" id="v12Front">Front</button><button class="v12-btn" id="v12Back">Back</button><button class="v12-btn" id="v12Quarter">3/4</button></div><p class="v12-note">Simulation uses sewn garment panels, seam constraints, fabric settings, and avatar collision.</p></div><div class="v12-section"><h3>ACTIVITY</h3><div class="v12-log" id="v12Log">Ready.</div></div></aside>
+ <footer class="v12-foot"><span>1 Measurements</span><span>→</span><span>2 Pattern</span><span>→</span><span>3 Sew panels</span><span>→</span><span>4 Simulate drape</span><span class="v12-status" id="v12Status">Pattern ready</span></footer>
+</div>
+
+
+<script type="module">
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg', svg=$('v12Pattern');
+document.body.classList.add('v12-core');
+const spec=[['bodyLength','Body length',68],['chestWidth','Chest width',53],['waistWidth','Waist width',50],['hemWidth','Hem width',52],['shoulderWidth','Shoulder width',46],['sleeveLength','Sleeve length',22],['bicepWidth','Bicep width',19],['cuffWidth','Cuff opening',17],['armholeDepth','Armhole depth',24],['neckOpening','Neck opening',19],['collarWidth','Collar width',2.2]];
+$('v12Inputs').innerHTML=spec.map(([id,l,v])=>`<label class="v12-field"><span>${l}</span><input id="v12_${id}" type="number" step=".1" min=".1" value="${document.getElementById(id)?.value||v}"></label>`).join('');
+let pieces=[],sel={pc:0,i:0},history=[],future=[],sewn=false,simulating=false,drag=null,attached=false;
+const V=id=>+($('v12_'+id)?.value||0),log=t=>{$('v12Log').textContent=t+'\n'+$('v12Log').textContent.slice(0,450);$('v12Status').textContent=t},E=(t,a={})=>{const e=document.createElementNS(NS,t);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,v));return e},copy=x=>JSON.parse(JSON.stringify(x));
+function P(x,y,n){return{x,y,n,hin:{x,y},hout:{x,y}}} function smooth(p,a,b,k=.18){p.hin={x:p.x-(b.x-a.x)*k,y:p.y-(b.y-a.y)*k};p.hout={x:p.x+(b.x-a.x)*k,y:p.y+(b.y-a.y)*k}}
+function draft(){const wasSewn=sewn;if(wasSewn){simulating=false;window.MonteliEngine?.simulate(false);window.MonteliEngine?.clear()}const L=V('bodyLength'),C=V('chestWidth'),W=V('waistWidth'),H=V('hemWidth'),S=V('shoulderWidth'),SL=V('sleeveLength'),B=V('bicepWidth'),CF=V('cuffWidth'),A=V('armholeDepth'),N=V('neckOpening');let f=[P(0,5,'center neck'),P(N/2,0,'neck'),P(S/2,3,'shoulder'),P(C/2,A,'underarm'),P(W/2,L*.62,'waist'),P(H/2,L,'hem side'),P(0,L,'center hem')];smooth(f[1],f[0],f[2],.14);smooth(f[3],f[2],f[4],.16);smooth(f[4],f[3],f[5],.1);let b=copy(f);b[0].y=2;b[1].y=0;smooth(b[1],b[0],b[2],.1);let sl=[P(0,0,'cap center'),P(B,9,'front cap'),P(CF,SL+18,'front cuff'),P(-CF,SL+18,'back cuff'),P(-B,9,'back cap')];smooth(sl[0],sl[4],sl[1],.23);smooth(sl[1],sl[0],sl[2],.15);smooth(sl[4],sl[3],sl[0],.15);pieces=[{name:'FRONT · CUT 1',pts:f,tx:35,ty:12},{name:'BACK · CUT 1',pts:b,tx:105,ty:12},{name:'SLEEVE · CUT 2',pts:sl,tx:178,ty:18}];sewn=false;render();log('Pattern drafted from flat-lay measurements')}
+function path(pc){const q=p=>({x:p.x+pc.tx,y:p.y+pc.ty}),a=pc.pts,z=q(a[0]);let d=`M${z.x},${z.y}`;for(let i=0;i<a.length;i++){const p=a[i],n=a[(i+1)%a.length],h=q(p.hout),j=q(n.hin),m=q(n);d+=` C${h.x},${h.y} ${j.x},${j.y} ${m.x},${m.y}`}return d+'Z'}
+function render(){svg.innerHTML='';const defs=E('defs'),pat=E('pattern',{id:'g12',width:5,height:5,patternUnits:'userSpaceOnUse'});pat.appendChild(E('path',{d:'M5 0L0 0 0 5',fill:'none',class:'v12-grid'}));defs.appendChild(pat);svg.append(defs,E('rect',{width:220,height:130,fill:'url(#g12)'}));pieces.forEach((pc,pi)=>{const pa=E('path',{d:path(pc),class:'v12-piece'+(sel.pc===pi?' sel':'')});pa.onclick=()=>{sel.pc=pi;sel.i=0;render()};svg.appendChild(pa);const t=E('text',{x:pc.tx+8,y:pc.ty+35,class:'v12-label'});t.textContent=pc.name;svg.appendChild(t);if(sel.pc===pi)pc.pts.forEach((p,i)=>{const X=x=>x+pc.tx,Y=y=>y+pc.ty;svg.appendChild(E('line',{x1:X(p.hin.x),y1:Y(p.hin.y),x2:X(p.hout.x),y2:Y(p.hout.y),class:'v12-hline'}));[['hin',p.hin,.8,'v12-handle'],['hout',p.hout,.8,'v12-handle'],['anchor',p,1.1,'v12-anchor']].forEach(([k,q,r,c])=>svg.appendChild(E('circle',{cx:X(q.x),cy:Y(q.y),r,class:c,'data-pc':pi,'data-i':i,'data-k':k})))})});const dim=E('text',{x:8,y:126,class:'v12-dim'});dim.textContent=`FLAT GARMENT · BODY ${V('bodyLength')} · CHEST ${V('chestWidth')} · WAIST ${V('waistWidth')} · HEM ${V('hemWidth')} cm`;svg.appendChild(dim);bind();inspector()}
+function point(e){const q=svg.createSVGPoint();q.x=e.clientX;q.y=e.clientY;return q.matrixTransform(svg.getScreenCTM().inverse())}
+function snapshot(){history.push(copy(pieces));if(history.length>60)history.shift();future=[]}
+function commitPoint(pc,p){const map={'center hem':'bodyLength','hem side':'hemWidth','waist':'waistWidth','underarm':'chestWidth','shoulder':'shoulderWidth','neck':'neckOpening','front cuff':'cuffWidth','back cuff':'cuffWidth','front cap':'bicepWidth','back cap':'bicepWidth'}[p.n];if(map){const val=map==='bodyLength'?Math.max(1,p.y):map==='neckOpening'?Math.max(1,p.x*2):map==='waistWidth'||map==='chestWidth'||map==='hemWidth'||map==='shoulderWidth'?Math.max(1,p.x*2):Math.max(1,Math.abs(p.x));$('v12_'+map).value=val.toFixed(1);if($(map))$(map).value=val.toFixed(1);window.setStateFromControls?.();window.updatePattern?.()}if(sewn){sewn=false;simulating=false;window.MonteliEngine?.simulate(false);window.MonteliEngine?.clear()}log(map?`${p.n} edited · ${$('v12_'+map).value} cm · measurements and sewn draft updated`:'Pattern geometry edited · assemble again to update the sewn form')}
+function bind(){svg.onpointerdown=e=>{const n=e.target.closest?.('[data-k]');if(!n)return;e.preventDefault();snapshot();sel={pc:+n.dataset.pc,i:+n.dataset.i};drag={pc:sel.pc,i:sel.i,k:n.dataset.k,start:point(e),orig:copy(pieces[sel.pc].pts[sel.i]),pointerId:e.pointerId};svg.setPointerCapture(e.pointerId)};svg.onpointermove=e=>{if(!drag||drag.pointerId!==e.pointerId)return;const {pc,i,k,start,orig}=drag,p=pieces[pc].pts[i],q=point(e),dx=q.x-start.x,dy=q.y-start.y;if(k==='anchor'){p.x=orig.x+dx;p.y=orig.y+dy;p.hin.x=orig.hin.x+dx;p.hin.y=orig.hin.y+dy;p.hout.x=orig.hout.x+dx;p.hout.y=orig.hout.y+dy}else{p[k].x=orig[k].x+dx;p[k].y=orig[k].y+dy}render()};svg.onpointerup=e=>{if(!drag||drag.pointerId!==e.pointerId)return;const pc=pieces[drag.pc],p=pc.pts[drag.i];drag=null;commitPoint(pc,p)};svg.onpointercancel=()=>{drag=null}}
+function inspector(){const p=pieces[sel.pc]?.pts[sel.i];if(!p)return;$('v12Selection').innerHTML=`<b style="font-size:10px">${pieces[sel.pc].name} · ${p.n}</b><label class="v12-field"><span>X (cm)</span><input data-geo="x" value="${p.x.toFixed(2)}"></label><label class="v12-field"><span>Y (cm)</span><input data-geo="y" value="${p.y.toFixed(2)}"></label><label class="v12-field"><span>Handle out X</span><input data-geo="hout.x" value="${p.hout.x.toFixed(2)}"></label><label class="v12-field"><span>Handle out Y</span><input data-geo="hout.y" value="${p.hout.y.toFixed(2)}"></label>`;document.querySelectorAll('[data-geo]').forEach(i=>i.onchange=()=>{snapshot();const [a,b]=i.dataset.geo.split('.');if(b)p[a][b]=+i.value;else p[a]=+i.value;render();commitPoint(pieces[sel.pc],p)})}
+const ids=spec.map(x=>x[0]).concat(['seamAllowance']);
+function sync(){for(const id of ids){const v=$('v12_'+id)?.value;if(v!=null&&$(id))$(id).value=v}const garment=$('v12Garment').value;document.querySelectorAll('#garmentSeg button').forEach(b=>{b.classList.toggle('active',b.dataset.garment===garment);if(b.dataset.garment===garment)b.click()});for(const id of ids){const v=$('v12_'+id)?.value;if(v!=null&&$(id))$(id).value=v}const gsm=+$('v12Gsm').value||300,material=$('v12Fabric').value;$('gsm').value=gsm;$('composition').value=material==='Wool/Cashmere'?'70% merino wool / 30% cashmere':'100% cotton';$('fabricPreset').value=material==='Wool/Cashmere'?'wc400':material==='Milano Knit'?'custom':'cotton300';$('seamAllowance').value=$('v12SA').value;$('fabricThickness').value=material==='Wool/Cashmere'?.18:material==='Milano Knit'?.14:.1;$('stretchWarp').value=material==='Milano Knit'?5:material==='Wool/Cashmere'?11:8;$('stretchWeft').value=material==='Milano Knit'?7:material==='Wool/Cashmere'?13:12;$('bend').value=material==='Wool/Cashmere'?68:material==='Milano Knit'?62:56;$('gravity').value=9.8*(gsm/300);window.setStateFromControls?.();window.updatePattern?.()}
+spec.forEach(([id])=>$('v12_'+id).addEventListener('input',()=>{if($(id))$(id).value=$('v12_'+id).value;draft();if(sewn){sewn=false;window.MonteliEngine?.clear();log('Measurements changed · assemble again to refresh the sewn form')}}));
+$('v12Undo').onclick=()=>{if(!history.length)return;future.push(copy(pieces));pieces=history.pop();render();log('Undo')};$('v12Redo').onclick=()=>{if(!future.length)return;history.push(copy(pieces));pieces=future.pop();render();log('Redo')};$('v12Mirror').onclick=()=>{snapshot();const pc=pieces[sel.pc];pc.pts.forEach(p=>{const h=copy(p.hin);p.hin={x:-p.hout.x,y:p.hout.y};p.hout={x:-h.x,y:h.y};p.x=-p.x});pc.pts.reverse();render();if(sewn){sewn=false;simulating=false;window.MonteliEngine?.simulate(false);window.MonteliEngine?.clear()}log('Pattern piece mirrored · assemble again to update sewn form')};$('v12Redraft').onclick=()=>{if(sewn){sewn=false;window.MonteliEngine?.clear()}draft()};
+document.querySelectorAll('[data-tool]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-tool]').forEach(x=>x.classList.remove('active'));b.classList.add('active');const tool=b.dataset.tool;if(tool==='add'){snapshot();const pc=pieces[sel.pc],a=pc.pts[sel.i],n=pc.pts[(sel.i+1)%pc.pts.length];pc.pts.splice(sel.i+1,0,P((a.x+n.x)/2,(a.y+n.y)/2,'new point'));sel.i++;render();if(sewn){sewn=false;window.MonteliEngine?.clear()}log('Pattern point added · assemble again to update sewn form')}if(tool==='delete'){const pc=pieces[sel.pc];if(pc.pts.length>3){snapshot();pc.pts.splice(sel.i,1);sel.i=Math.max(0,sel.i-1);render();if(sewn){sewn=false;window.MonteliEngine?.clear()}log('Pattern point removed · assemble again to update sewn form')}}});
+$('v12Fit').onclick=()=>svg.setAttribute('viewBox','0 0 220 130');
+function show2D(){$('v12Pattern').style.display='block';$('v12Three').style.display='none';$('v12Toolbar').style.display='flex';$('v12Tab2D').classList.add('active');$('v12Tab3D').classList.remove('active')}
+function show3D(){const host=$('v12Three');$('v12Pattern').style.display='none';host.style.display='block';$('v12Toolbar').style.display='none';$('v12Tab3D').classList.add('active');$('v12Tab2D').classList.remove('active');if(!attached){window.MonteliEngine?.attach(host);attached=true}else window.MonteliEngine?.resize(host)}
+$('v12Tab2D').onclick=show2D;$('v12Tab3D').onclick=()=>{show3D();if(!sewn)log('Enter measurements, then Assemble Preview to sew the 3D panels')};
+$('v12Sew').onclick=()=>{sync();const btn=$('generatePattern');btn?.click();if(!window.state||!window.MonteliEngine){log('Garment engine is still loading');return}const result=window.MonteliEngine.assemble();sewn=true;show3D();log(`Sewn cloth ready · ${result.pieces.join(', ')} · ${result.particles.toLocaleString()} particles · ${result.constraints.toLocaleString()} seam and fabric constraints`)};
+$('v12Sim').onclick=()=>{if(!sewn){log('Assemble Preview first');return}simulating=true;window.MonteliEngine?.simulate(true);log('Cloth drape simulation running')};$('v12Pause').onclick=()=>{simulating=false;window.MonteliEngine?.simulate(false);log('Cloth simulation paused')};$('v12Reset').onclick=()=>{simulating=false;window.MonteliEngine?.reset();log('Cloth reset to the sewn rest shape')};
+function view(which){show3D();window.MonteliEngine?.view(which)}$('v12Front').onclick=()=>view('front');$('v12Back').onclick=()=>view('back');$('v12Quarter').onclick=()=>view('quarter');$('v12Garment').onchange=()=>{const type=$('v12Garment').value;if(type==='hoodie')$('v12_sleeveLength').value=64;else if(type==='tshirt')$('v12_sleeveLength').value=22;draft();sync()};
+window.addEventListener('resize',()=>{if(attached)window.MonteliEngine?.resize($('v12Three'))});$('v12SA').addEventListener('input',()=>{if($('seamAllowance'))$('seamAllowance').value=$('v12SA').value;if(sewn){sewn=false;window.MonteliEngine?.clear();log('Seam allowance changed · assemble again to refresh the sewn form')}});$('v12Gsm').addEventListener('input',()=>{if(sewn){sewn=false;window.MonteliEngine?.clear();log('Fabric weight changed · assemble again to refresh the sewn form')}});$('v12Fabric').addEventListener('change',()=>{sync();if(sewn){sewn=false;window.MonteliEngine?.clear();log('Fabric changed · assemble again to refresh the sewn form')}});
+draft();show2D();log('Ready · measurements draft a pattern; Assemble Preview creates and sews a multi-panel cloth shell');
 </script>
 
 </body>

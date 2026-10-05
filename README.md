@@ -68,3 +68,12 @@ V8 starts the deeper engine work rather than adding surface-level buttons. It ad
 
 ## V9 Complete Platform
 V9 consolidates the remaining garment-development systems into one platform architecture and adds a Platform Center to inspect CAD, simulation, materials, fit, production, sampling/versioning and AI systems. Production-equivalence claims remain validation-gated where appropriate.
+
+## V10 Visual CAD
+The guided Pattern step now opens a live visual pattern workspace. Measurements generate visible front/back/sleeve pieces; anchors and Bézier handles are editable on-canvas and numerically in cm from the right inspector.
+
+## V11 Live Workspace
+The center canvas no longer stays blank during pattern work. A persistent 2D PATTERN / 3D GARMENT switch is visible above the workspace. The Pattern workflow step automatically opens generated Front, Back and Sleeve cut pieces from the current flat-lay measurements. Editing measurement inputs redraws the pieces live, and anchors/Bezier handles are draggable directly on the center canvas.
+
+## V12 Functional Core
+V12 replaces the accumulated prototype UI with a smaller functional workspace: left = garment/fabric input, center = live 2D/3D work surface, right = selection/construction/simulation inspector. Hollow legacy controls are hidden in V12 Core mode. Sewing has a visible transition; 3D uses a real Three.js avatar/garment scene with orbit controls and working view/simulate/pause/reset controls.

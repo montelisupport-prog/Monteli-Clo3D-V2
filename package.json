@@ -1,6 +1,6 @@
 {
-  "name": "monteli-atelier-studio-v9-complete-platform",
-  "version": "0.9.0",
+  "name": "monteli-atelier-studio-v12-functional-core",
+  "version": "0.12.0",
   "private": true,
   "description": "MONTELI Atelier next-generation garment CAD and cloth simulation foundation",
   "scripts": {
